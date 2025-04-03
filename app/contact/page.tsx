@@ -54,11 +54,11 @@ export default function ContactPage() {
           <div className="flex gap-4">
             <Input
               isRequired
-              errorMessage="Please enter your förening"
+              errorMessage="Please enter your association"
               label="Förening"
               labelPlacement="outside"
               //   name="förening"
-              placeholder="Enter your förening"
+              placeholder="Enter your association"
               type="text"
               {...register("förening")}
             />
