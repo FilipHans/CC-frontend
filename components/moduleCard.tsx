@@ -12,7 +12,7 @@ interface ModuleCardProps {
 export function ModuleCard({title, description, price, onSelect, selected}: ModuleCardProps) {
     return (
         <article>
-            <Card className={`p-4 cursor-pointer transition-all duration-300 ${selected ? "border-2 border-blue-200 shadow-lg" : "border border-gray-300"}`} onPress={onSelect}>
+            <Card className={`p-4 cursor-pointer transition-all duration-300 ${selected ? "border-2 border-blue-200 shadow-lg" : "border border-gray-300"}`} >
             <CardHeader>
                 <h2>{title}</h2>
             </CardHeader>

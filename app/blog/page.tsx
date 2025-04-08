@@ -35,8 +35,8 @@ const appearance = {
 };
 
 
-export default function Page() {
-  const amount: number = 49.99;
+export default function Payment() {
+  const amount: number = 2.99;
   return (
     <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-red-500 to-purple-300">
       <div className="mb-10">
@@ -52,6 +52,11 @@ export default function Page() {
           mode: "payment",
           amount: convertToSubCurrency(amount),
           currency: "usd",
+          appearance: {theme: 'night', labels: 'floating', rules: {
+            
+          }},
+          
+          
         }}
         
       >

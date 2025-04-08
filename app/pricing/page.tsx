@@ -6,6 +6,7 @@ import { useState } from "react";
 export default function PricingPage() {
   const [selectedModule, setSelectedModule] = useState<string | null>(null);
 
+  console.log(selectedModule)
   return (
     <section>
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -22,14 +23,14 @@ export default function PricingPage() {
             title="Pro"
             description="Pro module with advanced features."
             price="199"
-            onSelect={() => setSelectedModule("Selected Pro")}
+            onSelect={() => setSelectedModule("Pro")}
             selected={selectedModule === "Pro"}
           />
           <ModuleCard
             title="Enterprise"
             description="Enterprise module with all features."
             price="299"
-            onSelect={() => setSelectedModule("Selected Enterprise")}
+            onSelect={() => setSelectedModule("Enterprise")}
             selected={selectedModule === "Enterprise"}
           />
         </div>
