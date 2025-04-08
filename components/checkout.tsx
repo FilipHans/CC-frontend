@@ -10,35 +10,12 @@ import {
     Elements,
 } from '@stripe/react-stripe-js'
 import convertToSubcurrency from '../lib/convertToSubcurrency';
-import { form } from '@heroui/theme';
+import { Form } from '@heroui/react';
 
 const Checkout = ({amount} : {amount: number}) => {
     const stripe = useStripe();
     const elements = useElements();
     
-    
-    const appearance = {
-        theme: 'night',
-        variables: {
-          fontFamily: 'Sohne, system-ui, sans-serif',
-          fontWeightNormal: '500',
-          borderRadius: '8px',
-          colorBackground: '#0A2540',
-          colorPrimary: '#EFC078',
-          accessibleColorOnColorPrimary: '#1A1B25',
-          colorText: 'white',
-          colorTextSecondary: 'white',
-          colorTextPlaceholder: '#ABB2BF',
-          tabIconColor: 'white',
-          logoColor: 'dark'
-        },
-        rules: {
-          '.Input': {
-            backgroundColor: '#212D63',
-            border: '1px solid var(--colorPrimary)'
-          }
-        }
-      };
     const [errorMessage, setErrorMessage] = useState<string>();
     const [clientSecret, setClientSecret] = useState('');
     const [loading, setLoading] = useState(false);
@@ -91,7 +68,7 @@ const Checkout = ({amount} : {amount: number}) => {
     
 
     return (
-        <form onSubmit={handleSubmit} className='bg-white p-2 rounded-md'>
+        <Form onSubmit={handleSubmit} className='bg-white p-2 rounded-md'>
             {clientSecret && <PaymentElement></PaymentElement>}
             <button 
             disabled={!stripe ||loading}
@@ -99,7 +76,7 @@ const Checkout = ({amount} : {amount: number}) => {
             >
             {!loading ? `Pay $${amount}` : 'Processing...'}
             </button>
-        </form>
+        </Form>
     );
 }
 

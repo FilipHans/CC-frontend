@@ -6,7 +6,6 @@ import { useState } from "react";
 export default function PricingPage() {
   const [selectedModule, setSelectedModule] = useState<string | null>(null);
 
-  console.log(selectedModule)
   return (
     <section>
       <div className="flex flex-col items-center justify-center min-h-screen py-2">

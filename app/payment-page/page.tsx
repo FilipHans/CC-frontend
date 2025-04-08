@@ -11,34 +11,12 @@ if (process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY === undefined) {
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 
-const appearance = {
-  theme: 'night',
-  variables: {
-    fontFamily: 'Sohne, system-ui, sans-serif',
-    fontWeightNormal: '500',
-    borderRadius: '8px',
-    colorBackground: '#0A2540',
-    colorPrimary: '#EFC078',
-    accessibleColorOnColorPrimary: '#1A1B25',
-    colorText: 'white',
-    colorTextSecondary: 'white',
-    colorTextPlaceholder: '#ABB2BF',
-    tabIconColor: 'white',
-    logoColor: 'dark'
-  },
-  rules: {
-    '.Input': {
-      backgroundColor: '#212D63',
-      border: '1px solid var(--colorPrimary)'
-    }
-  }
-};
 
 
 export default function Payment() {
   const amount: number = 2.99;
   return (
-    <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-red-500 to-purple-300">
+    <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-yellow-500 to-red-300">
       <div className="mb-10">
         <h2 className="text-2xl">
           The cost is
