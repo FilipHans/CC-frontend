@@ -130,13 +130,13 @@ export const ChevronDownIcon = ({strokeWidth = 1.5, ...otherProps}: IconSvgProps
 };
 
 export const columns = [
-  {name: "ID", uid: "id", sortable: true},
-  {name: "NAME", uid: "name", sortable: true},
-  {name: "AGE", uid: "age", sortable: true},
-  {name: "ROLE", uid: "role", sortable: true},
+  {name: "ID", uid: "id",},
+  {name: "NAME", uid: "name",},
+  {name: "AGE", uid: "age",},
+  {name: "ROLE", uid: "role",},
   {name: "TEAM", uid: "team"},
   {name: "EMAIL", uid: "email"},
-  {name: "STATUS", uid: "status", sortable: true},
+  {name: "STATUS", uid: "status",},
   {name: "ACTIONS", uid: "actions"},
 ];
 
@@ -622,25 +622,25 @@ export default function AssociationList() {
   return (
     <Table
       isCompact
-      aria-label="Example table with custom cells, pagination and sorting"
+      aria-label="Example table with custom cells, pagination"
       bottomContent={bottomContent}
       bottomContentPlacement="outside"
       selectedKeys={selectedKeys}
       selectionMode="multiple"
-      sortDescriptor={sortDescriptor}
+      // sortDescriptor={sortDescriptor}
       classNames={{wrapper: ['max-w-full', 'bg-transparent', 'bg-gray-800'], th: ["bg-transparent", "border-b", "border-divider"]}}
       maxTableHeight={800}
       topContent={topContent}
       topContentPlacement="outside"
       onSelectionChange={setSelectedKeys}
-      onSortChange={setSortDescriptor}
+      // onSortChange={setSortDescriptor}
     >
       <TableHeader columns={headerColumns}>
         {(column) => (
           <TableColumn
             key={column.uid}
             align={column.uid === "actions" ? "center" : "start"}
-            allowsSorting={column.sortable}
+            // allowsSorting={column.sortable}
           >
             {column.name}
           </TableColumn>
