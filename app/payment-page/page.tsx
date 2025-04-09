@@ -33,8 +33,6 @@ export default function Payment() {
           appearance: {theme: 'night', labels: 'floating', rules: {
             
           }},
-          
-          
         }}
         
       >
