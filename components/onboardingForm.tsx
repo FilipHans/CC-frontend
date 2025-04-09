@@ -61,7 +61,7 @@ export default function OnboardingForm() {
         onSubmit={handleSubmit(onSubmit)}
       >
         {/* Logo */}
-        <label htmlFor="logo-upload" className="font-medium">Ladda upp logo</label>
+        <label htmlFor="logo-upload" className="font-medium">Upload the association logo</label>
         <input
           id="logo-upload"
           type="file"
@@ -79,13 +79,13 @@ export default function OnboardingForm() {
 
 
         {/* Färger */}
-        <div className="space-y-2">
-        <label htmlFor="primaryColor" className="font-medium">Primär färg</label>
+        <div className="space-y-4">
+        <label htmlFor="primaryColor" className="font-medium">Primary compound color </label>
       <input
         id="primaryColor"
         type="color"
         {...register('primaryColor')}
-        className="w-16 h-10 p-0 border rounded"
+        className="w-16 h-10 p-0 border rounded space-y-2"
       />
       {errors.primaryColor && (
         <span className="text-red-500 text-sm">
@@ -96,7 +96,7 @@ export default function OnboardingForm() {
 
 
         <div className="space-y-2">
-          <label htmlFor="secondaryColor" className="font-medium">Sekundär färg</label>
+          <label htmlFor="secondaryColor" className="font-medium">Secondary compound color</label>
           <input
             id="secondaryColor"
             type="color"
@@ -113,14 +113,14 @@ export default function OnboardingForm() {
         {/* Tränare */}
         <Input
           isRequired
-          className="w-full"
+          className="w-full justify-center items-center"
           defaultValue=""
           label="Coach's name plus team"
           {...register('trainerName')}
         />
         <Input
           isRequired
-          className="w-full"
+          className="w-full justify-center items-center"
           defaultValue=""
           label="Coach's email"
           type="email"
@@ -130,7 +130,7 @@ export default function OnboardingForm() {
         {/* Betalningsmejl */}
         <Input
           isRequired
-          className="w-full"
+          className="w-full justify-center items-center"
           defaultValue=""
           label="Payment email"
           type="email"
